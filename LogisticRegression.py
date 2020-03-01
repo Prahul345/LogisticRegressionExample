@@ -23,8 +23,7 @@ X_train,X_test,y_train,y_test=train_test_split(X,y,test_size=0.25,random_state=0
 from sklearn.linear_model import LogisticRegression
 
 # instantiate the model (using the default parameters)
-logreg = LogisticRegression()
-
+logreg = LogisticRegression(solver='lbfgs', max_iter=1000)
 # fit the model with data
 logreg.fit(X_train,y_train)
 
